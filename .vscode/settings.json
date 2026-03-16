@@ -1,0 +1,16 @@
+{
+  "typescript.preferences.includePackageJsonAutoImports": "off",
+  "typescript.validate.enable": true,
+  "typescript.surveys.enabled": false,
+  "files.exclude": {
+    "**/node_modules/**": false
+  },
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  "typescript.preferences.noSemicolons": false,
+  "typescript.tsc.autoDetect": "off",
+  "problems.decorations.enabled": true,
+  "typescript.reportStyleChecksAsWarnings": false,
+  "typescript.preferences.quoteStyle": "double"
+}
