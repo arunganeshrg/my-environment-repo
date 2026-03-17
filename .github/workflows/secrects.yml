@@ -3,7 +3,8 @@ on:
   push:
     branches:
       - main
-      - dev
+      - dev-/*
+      - my-branch
 env:
   MONGODB_DB_NAME: my-mongo-db
 jobs:
@@ -30,7 +31,13 @@ jobs:
       - name: Run tests
         run: npm test
       - name: Output information
-        run: echo "MONGODB_USERNAME:" ${{env.MONGODB_USERNAME}}
+        run: |
+          echo "MONGODB_USERNAME:" ${{env.MONGODB_USERNAME}}
+          echo "MONGODB_PASSWORD:" ${{env.MONGODB_PASSWORD}}
+          echo "MONGODB_CLUSTER_ADDRESS:" ${{env.MONGODB_CLUSTER_ADDRESS}}
+          echo "MONGODB_DB_NAME:" ${{env.MONGODB_DB_NAME}}
+          echo "Branch:" ${{github.ref}}
+          echo "Environment: testing"
   deploy:
     needs: test
     runs-on: ubuntu-latest
