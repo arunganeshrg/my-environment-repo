@@ -3,7 +3,7 @@
   "typescript.validate.enable": true,
   "typescript.surveys.enabled": false,
   "files.exclude": {
-    "**/node_modules/**": false
+    "**/node_modules/**": true
   },
   "search.exclude": {
     "**/node_modules": true

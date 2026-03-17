@@ -16,5 +16,10 @@
   "include": ["**/*.js"],
   "typeAcquisition": {
     "enable": false
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "skipLibCheck": true
+    }
   }
 }
